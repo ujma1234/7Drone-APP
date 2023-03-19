@@ -1,6 +1,10 @@
+import 'dart:convert';
+
+import 'package:contact/model/command.dart';
 import 'package:contact/screen/screen_drone.dart';
 import 'package:contact/screen/screen_robot.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
 class MainScreen extends StatefulWidget {
   // List<Main> home;
@@ -98,7 +102,9 @@ class _MainScreenState extends State<MainScreen> {
                       style: TextStyle(color: Colors.white),
                     ),
                     color: Colors.black45,
-                    onPressed: () {},
+                    onPressed: () async {
+                      var response = await Command_APP2ROBOT("emergency");
+                    },
                   )
               ),
               )

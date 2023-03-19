@@ -1,3 +1,4 @@
+import 'package:contact/model/command.dart';
 import 'package:contact/screen/screen_main.dart';
 import 'package:flutter/material.dart';
 
@@ -49,7 +50,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         style: TextStyle(color: Colors.white),
                       ),
                       color: Colors.grey,
-                      onPressed: () {
+                      onPressed: () async {
+                        var response = await Command_APP2ROBOT("connection");
                         Navigator.push(
                             context,
                             MaterialPageRoute(

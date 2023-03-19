@@ -1,3 +1,4 @@
+import 'package:contact/model/command.dart';
 import 'package:contact/screen/screen_main.dart';
 import 'package:flutter/material.dart';
 
@@ -82,10 +83,9 @@ class _RobotScreenState extends State<RobotScreen> {
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   color: Colors.black45,
-                                  onPressed: () {
-
+                                  onPressed: () async {
                                     // STOP API CALL
-
+                                    var response = await Command_APP2ROBOT("emergency");
                                   },
                                 )
                             ),
@@ -105,10 +105,9 @@ class _RobotScreenState extends State<RobotScreen> {
                                     style: TextStyle(color: Colors.white),
                                   ),
                                   color: Colors.black45,
-                                  onPressed: () {
-
+                                  onPressed: () async {
                                     //ComeBack API CALL
-
+                                    var response = await Command_APP2ROBOT("robot_back");
                                   },
                                 )
                             ),
@@ -133,10 +132,9 @@ class _RobotScreenState extends State<RobotScreen> {
                               style: TextStyle(color: Colors.white),
                             ),
                             color: Colors.black45,
-                            onPressed: () {
-
+                            onPressed: () async {
                               //Robot Shoot API CALL !
-
+                              var response = await Command_APP2ROBOT("robot_shoot");
                             },
                           )
                       ),

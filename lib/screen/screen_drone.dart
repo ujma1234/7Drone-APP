@@ -1,3 +1,4 @@
+import 'package:contact/model/command.dart';
 import 'package:contact/screen/screen_main.dart';
 import 'package:flutter/material.dart';
 
@@ -66,10 +67,9 @@ class _DroneScreenState extends State<DroneScreen> {
                             style: TextStyle(color: Colors.white),
                           ),
                           color: Colors.black45,
-                          onPressed: () {
-
+                          onPressed: () async {
                             // Drone Shoot API CALL
-
+                            var response = await Command_APP2ROBOT("drone_shoot");
                           },
                         )
                     ),
@@ -89,10 +89,9 @@ class _DroneScreenState extends State<DroneScreen> {
                             style: TextStyle(color: Colors.white),
                           ),
                           color: Colors.black45,
-                          onPressed: () {
-
+                          onPressed: () async {
                             // Emergency Back API CALL
-
+                            var response = await Command_APP2ROBOT("drone_back");
                           },
                         )
                     ),
