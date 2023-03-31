@@ -6,6 +6,8 @@ import 'package:contact/screen/screen_robot.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:contact/model/map_catch.dart';
+
 class MainScreen extends StatefulWidget {
   // List<Main> home;
   // MainScreen({this.home})
@@ -103,7 +105,7 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                     color: Colors.black45,
                     onPressed: () async {
-                      var response = await Command_APP2ROBOT("emergency");
+                      // var response = await Command_APP2ROBOT("emergency");
                     },
                   )
               ),

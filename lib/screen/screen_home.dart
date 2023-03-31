@@ -51,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       color: Colors.grey,
                       onPressed: () async {
-                        var response = await Command_APP2ROBOT("connection");
+                        // var response = await Command_APP2ROBOT("connection");
                         Navigator.push(
                             context,
                             MaterialPageRoute(
